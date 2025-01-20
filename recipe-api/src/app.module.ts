@@ -17,9 +17,9 @@ import { validate } from './config/env.validation';
         port: configService.get<number>('DB_PORT'),
         username: configService.get<string>('DB_USERNAME'),
         password: configService.get<string>("DB_PASSWORD"),
-        database: configService.get<string>('POSTGRES_HOST'),
+        database: configService.get<string>('DB_NAME'),
         entities: [Recipe, Ingredient],
-        synchronize: configService.get<boolean>('DB_SYNCHRONIZATION'),
+        synchronize: false,
         logging: configService.get<boolean>('DB_LOGGING'),
       })
     }),
